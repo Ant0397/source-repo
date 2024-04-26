@@ -1,4 +1,4 @@
-name: Run tests in test repo
+name: Run UI tests in test repo
 
 on:
   push:
