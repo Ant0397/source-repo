@@ -14,9 +14,9 @@ jobs:
       - name: Trigger UI tests in Ant0397/example-test-repo
         run: |
           # Set the required variables
-          repo_owner="Ant0397" 
-          repo_name="example-test-repo"  
-          event_type="run-ui-tests" 
+          repo_owner="sainsburys-tech" 
+          repo_name="qaa-automation-testing"  
+          event_type="deploy_qaa_frontend_preprod" 
           run_number=${{ github.run_number }}
           repo=${{ github.repository }}
           commit=${{ github.sha }}
