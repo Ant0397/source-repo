@@ -22,7 +22,7 @@ jobs:
             -d "{ \"client_id\": \"${{ secrets.CLIENT_ID }}\",\"client_secret\": \"${{ secrets.CLIENT_SECRET }}\" }" \
             https://xray.cloud.getxray.app/api/v1/authenticate)
 
-            echo "XRAY_TOKEN=$(echo $token | cut -c 1-6)" >> $GITHUB_ENV
+            echo "XRAY_TOKEN=$(echo $token)" >> $GITHUB_ENV
 
           # curl -L \
           # -X POST
