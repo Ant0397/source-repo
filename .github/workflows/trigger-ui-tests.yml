@@ -32,7 +32,7 @@ jobs:
 
           # echo $response
 
-          cd ${GITHUB_WORKSPACE}/cucumber-json/cucumber
+          cd ${GITHUB_WORKSPACE}/../cucumber-json/cucumber
           ls -al
 
           
