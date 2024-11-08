@@ -35,7 +35,7 @@ jobs:
 
           # echo $response
 
-          cd ../
+          cd cucumber-json
           ls -al
 
           
