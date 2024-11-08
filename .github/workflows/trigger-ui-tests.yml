@@ -27,7 +27,7 @@ jobs:
       - name: Publish to Xray
         run: |
           curl -L \
-          -X POST
+          -X POST \
           -H "Content-Type: application/json" \
           -H "Authorization: Bearer $XRAY_TOKEN" \
           -d "{test: stuff}" \
