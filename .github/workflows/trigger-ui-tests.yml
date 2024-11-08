@@ -6,9 +6,6 @@ on:
       - main
   workflow_dispatch:
 
-env:
-  token: ""
-  
 jobs:
   trigger:
     runs-on: ubuntu-latest
@@ -26,11 +23,13 @@ jobs:
 
       - name: Publish to Xray
         run: |
-          curl -L \
+          response=$(curl -L \
           -X POST \
           -H "Content-Type: application/json" \
           -H "Authorization: Bearer $XRAY_TOKEN" \
-          -d @"cucumber.json" \
-          https://xray.cloud.getxray.app/api/v1/import/execution/cucumber
+          -d @"./cucumber-json/cucumber/cucumber.json" \
+          https://xray.cloud.getxray.app/api/v1/import/execution/cucumber)
+
+          echo $response
 
           
