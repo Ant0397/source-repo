@@ -5,6 +5,9 @@ on:
     branches:
       - main
   workflow_dispatch:
+
+env:
+  token: ""
   
 jobs:
   trigger:
@@ -13,19 +16,19 @@ jobs:
     steps:
       - name: Get Token
         run: |
-         token=$(curl -L \
+         ${{ env.token }}=$(curl -L \
             -X POST \
             -H "Content-Type: Application/Json" \
             -d "{ \"client_id\": \"${{ secrets.CLIENT_ID }}\",\"client_secret\": \"${{ secrets.CLIENT_SECRET }}\" }" \
             https://xray.cloud.getxray.app/api/v1/authenticate)
 
-          curl -L \
-          -X POST
-          -H "Content-Type: application/json" \
-          -H "Authorization: Bearer $token" \
-          -d "{test: stuff}"
-          https://xray.cloud.getxray.app/api/v1/import/execution/cucumber
+          # curl -L \
+          # -X POST
+          # -H "Content-Type: application/json" \
+          # -H "Authorization: Bearer $token" \
+          # -d "{test: stuff}"
+          # https://xray.cloud.getxray.app/api/v1/import/execution/cucumber
 
-          echo $token
+          echo ${{ env.token }}
 
           
