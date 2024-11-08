@@ -16,11 +16,13 @@ jobs:
     steps:
       - name: Get Token
         run: |
-         ${{ env.token }}=$(curl -L \
+         token=$(curl -L \
             -X POST \
             -H "Content-Type: Application/Json" \
             -d "{ \"client_id\": \"${{ secrets.CLIENT_ID }}\",\"client_secret\": \"${{ secrets.CLIENT_SECRET }}\" }" \
             https://xray.cloud.getxray.app/api/v1/authenticate)
+
+            echo "XRAY_TOKEN=$(echo $token | cut -c 1-6)" >> $GITHUB_ENV
 
           # curl -L \
           # -X POST
@@ -29,6 +31,8 @@ jobs:
           # -d "{test: stuff}"
           # https://xray.cloud.getxray.app/api/v1/import/execution/cucumber
 
-          echo ${{ env.token }}
+      - name: Publish to Xray
+        run: |
+          echo $XRAY_TOKEN
 
           
