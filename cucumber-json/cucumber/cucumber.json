@@ -1,0 +1,383 @@
+[
+  {
+    "description": "    76702 - QAA: Landing page -- All tests concerning functionality of the landing page",
+    "elements": [
+      {
+        "description": "",
+        "id": "landing-page;i-can-start-an-observation-by-clicking-the-'start-observation'-button",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "I can start an observation by clicking the 'Start observation' button",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 426000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am logged into QAA",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8976000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I am on the 'landing' page",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I click the button to start an observation",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 441000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should be redirected to the 'observation' page",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TEST_AC-2215",
+            "line": 9
+          },
+          {
+            "name": "@positive",
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "landing-page;i-can-see-a-list-of-colleagues-in-my-store-who-are-eligible-for-observations,-sorted-alphabetically",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "I can see a list of colleagues in my store who are eligible for observations, sorted alphabetically",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 93000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am logged into QAA",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "ColleagueId",
+                      "StoreCode"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "1",
+                      "AL4153"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "AL4153"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "3",
+                      "AL4153"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "4",
+                      "AL4153"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 19,
+            "name": "The following colleagues are in the database",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 360000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I am on the 'landing' page",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 97000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I should see colleague 1's full name in the to do list for Argos Care",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 793000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I should see colleague 2's full name in the to do list for Argos Care",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 597000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "I should see colleague 3's full name in the to do list for Argos Care",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 607000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I should see colleague 4's full name in the to do list for Argos Care",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 791000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "The list of colleagues should be sorted alphabetically",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TEST_AC_1538",
+            "line": 16
+          },
+          {
+            "name": "@positive",
+            "line": 17
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "landing-page;i-should-not-be-able-to-see-colleagues-who-are-not-part-of-my-store",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "I should not be able to see colleagues who are not part of my store",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 94000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I am logged into QAA",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 196000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "ColleagueId",
+                      "StoreCode"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2",
+                      "L2177"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 35,
+            "name": "The following colleagues are in the database",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 84000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I am on the 'landing' page",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 39,
+            "name": "I should not see colleague 2's full name in the to do list for Argos Care",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 819000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "I should not see colleague 2's full name in the paused list for Argos Care",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 532000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "I should not see colleague 2's full name in the completed list for Argos Care",
+            "match": {
+              "location": "not available:0"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 657000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TEST_AC_2218",
+            "line": 32
+          },
+          {
+            "name": "@negative",
+            "line": 33
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "landing-page",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Landing Page",
+    "tags": [],
+    "uri": "cypress\\e2e\\features\\landing\\landingPage.feature"
+  }
+]
