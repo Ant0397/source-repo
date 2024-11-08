@@ -19,8 +19,13 @@ jobs:
             -d "{ \"client_id\": \"${{ secrets.CLIENT_ID }}\",\"client_secret\": \"${{ secrets.CLIENT_SECRET }}\" }" \
             https://xray.cloud.getxray.app/api/v1/authenticate)
 
-      - name: Publish Results
-        run: |
+          curl -L \
+          -X POST
+          -H "Content-Type: application/json" \
+          -H "Authorization: Bearer $token" \
+          -d "{test: stuff}"
+          https://xray.cloud.getxray.app/api/v1/import/execution/cucumber
+
           echo $token
 
           
