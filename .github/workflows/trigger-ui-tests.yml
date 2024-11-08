@@ -25,7 +25,6 @@ jobs:
           projectKey: "AC"
 
       - name: Publish XRay artifact
-      - name: Add PR Link
         shell: sh
         run: |
           url=https://sainsburys-tech.atlassian.net/browse/${{ steps.xray.outputs.testExecKey }}
