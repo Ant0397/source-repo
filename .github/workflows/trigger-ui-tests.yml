@@ -17,7 +17,7 @@ jobs:
             -X POST \
             -H "Authorization: Bearer ${{ secrets.PAT }}" \
             -H "Content-Type: Application/Json" \
-            -d '{ "client_id": {{ secrets.CLIENT_ID }},"client_secret": {{ secrets.CLIENT_SECRET }} }
+            -d '{ "client_id": {{ secrets.CLIENT_ID }},"client_secret": {{ secrets.CLIENT_SECRET }} } \
             https://xray.cloud.getxray.app/api/v1/authenticate)
 
           echo token
