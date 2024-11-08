@@ -14,26 +14,35 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         
-      - name: Get Token
-        run: |
-         token=$(curl -L \
-            -X POST \
-            -H "Content-Type: Application/Json" \
-            -d "{ \"client_id\": \"${{ secrets.CLIENT_ID }}\",\"client_secret\": \"${{ secrets.CLIENT_SECRET }}\" }" \
-            https://xray.cloud.getxray.app/api/v1/authenticate)
+      # - name: Get Token
+      #   run: |
+      #    token=$(curl -L \
+      #       -X POST \
+      #       -H "Content-Type: Application/Json" \
+      #       -d "{ \"client_id\": \"${{ secrets.CLIENT_ID }}\",\"client_secret\": \"${{ secrets.CLIENT_SECRET }}\" }" \
+      #       https://xray.cloud.getxray.app/api/v1/authenticate)
 
-            echo "XRAY_TOKEN=$(echo $token)" >> $GITHUB_ENV
+      #       echo "XRAY_TOKEN=$(echo $token)" >> $GITHUB_ENV
 
-      - name: Publish to Xray
-        run: |
-          response=$(curl -L \
-          -X POST \
-          -H "Content-Type: application/json" \
-          -H "Authorization: Bearer $XRAY_TOKEN" \
-          -d @"./cucumber-json/cucumber/cucumber.json" \
-          https://xray.cloud.getxray.app/api/v1/import/execution/cucumber)
+      # - name: Publish to Xray
+      #   run: |
+      #     response=$(curl -L \
+      #     -X POST \
+      #     -H "Content-Type: application/json" \
+      #     -H "Authorization: Bearer $XRAY_TOKEN" \
+      #     -d @"./cucumber-json/cucumber/cucumber.json" \
+      #     https://xray.cloud.getxray.app/api/v1/import/execution/cucumber)
 
-          echo $response
+      #     echo $response
+      - name: Import to XRay
+        uses: mikepenz/xray-action@{latest-release}
+        with:
+          username: ${{ secrets.CLIENT_ID }}
+          password: ${{ secrets.CLIENT_SECRET }}
+          testFormat: "cucumber"
+          testPaths: "**/cucumber/*.json"
+          # testExecKey: "TEST-1"
+          projectKey: "AC"
 
 
           
