@@ -28,7 +28,7 @@ jobs:
         shell: sh
         run: |
           url=https://sainsburys-tech.atlassian.net/browse/${{ steps.xray.outputs.testExecKey }}
-          echo "__Created Test Execution [${{ steps.xray.outputs.testExecKey }}]($url)__.
+          echo "__Created Test Execution [${{ steps.xray.outputs.testExecKey }}]($url)__."
 
         
 
