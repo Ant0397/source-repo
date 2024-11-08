@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.CLIENT_SECRET }}
           testFormat: "cucumber"
           testPaths: "**/cucumber/*.json"
-          # testExecKey: "TEST-1"
+          testExecKey: "XRAY import test"
           projectKey: "AC"
 
 
