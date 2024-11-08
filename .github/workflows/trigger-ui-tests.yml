@@ -30,7 +30,7 @@ jobs:
           -X POST
           -H "Content-Type: application/json" \
           -H "Authorization: Bearer $XRAY_TOKEN" \
-          -d "{test: stuff}"
+          -d "{test: stuff}" \
           https://xray.cloud.getxray.app/api/v1/import/execution/cucumber
 
           
