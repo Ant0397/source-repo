@@ -24,15 +24,13 @@ jobs:
 
             echo "XRAY_TOKEN=$(echo $token)" >> $GITHUB_ENV
 
-          # curl -L \
-          # -X POST
-          # -H "Content-Type: application/json" \
-          # -H "Authorization: Bearer $token" \
-          # -d "{test: stuff}"
-          # https://xray.cloud.getxray.app/api/v1/import/execution/cucumber
-
       - name: Publish to Xray
         run: |
-          echo $XRAY_TOKEN
+          curl -L \
+          -X POST
+          -H "Content-Type: application/json" \
+          -H "Authorization: Bearer $XRAY_TOKEN" \
+          -d "{test: stuff}"
+          https://xray.cloud.getxray.app/api/v1/import/execution/cucumber
 
           
