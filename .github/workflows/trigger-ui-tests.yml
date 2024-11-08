@@ -35,7 +35,7 @@ jobs:
 
       #     echo $response
       - name: Import to XRay
-        uses: mikepenz/xray-action@3.1.1
+        uses: mikepenz/xray-action@v3.1.1
         with:
           username: ${{ secrets.CLIENT_ID }}
           password: ${{ secrets.CLIENT_SECRET }}
